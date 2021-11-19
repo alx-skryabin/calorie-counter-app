@@ -1,5 +1,5 @@
 {
-  "name": "calorie-counter-app",
+  "name": "health-calculators-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

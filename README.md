@@ -1,7 +1,10 @@
-### Calorie counter app
+### Health Calculator Apps
+
+1) Calculation of calories
+2) Calculation of body mass index
+3) Ideal weight
 
 React App 
-
 
 
 ### Available Scripts

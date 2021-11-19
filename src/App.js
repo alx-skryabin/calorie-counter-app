@@ -2,8 +2,10 @@ import React from 'react'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
+    <div className="wrapper">
+      <div className="form">Форма</div>
+      <div className="result">Калории</div>
+      <div className="imt">ИМТ</div>
     </div>
   )
 }
