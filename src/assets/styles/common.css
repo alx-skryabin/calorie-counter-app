@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-size: cover;
+  background: #223 url('../img/bg.jpeg') no-repeat fixed top center;
+}
+
+* {
+  scrollbar-color: gold #222;
+  scrollbar-width: thin;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, .4);
+}
