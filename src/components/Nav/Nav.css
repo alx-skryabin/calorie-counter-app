@@ -1,0 +1,62 @@
+.h_nav {
+  background: rgba(0, 0, 0, .6);
+}
+
+.h_nav-line {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  margin: 0 auto;
+}
+
+.h_nav-logo a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+}
+
+.h_nav-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.h_nav-menu a {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, .3);
+  padding: 3px 8px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  color: #eee;
+}
+
+.h_nav-menu a span {
+  margin-left: 5px;
+}
+
+/*sidenav*/
+.h_nav .sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-feedback {
+  padding: 20px;
+  text-align: center;
+}
+
+.h_nav .user-view {
+  padding: 30px !important;
+  margin-bottom: 0 !important;
+}
+
+.h_nav .nav-icon i {
+  margin-right: 10px !important;
+  font-size: 1.3em;
+}

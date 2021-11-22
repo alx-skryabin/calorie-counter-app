@@ -1,12 +1,10 @@
 import React from 'react'
+import Nav from './components/Nav/Nav'
 
 function App() {
   return (
     <div className="wrapper">
-      <div className="form">Форма</div>
-      <div className="result">Калории</div>
-      <div className="imt">ИМТ</div>
-      <div className="weight">Вес</div>
+      <Nav/>
     </div>
   )
 }
