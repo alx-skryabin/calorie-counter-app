@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './title'
-import CalorieCalc from '../CalorieСalc/CalorieСalc'
+import CalorieCalc from '../../page/CalorieСalc/CalorieСalc'
 import './Content.css'
 
 export default class Content extends React.Component {

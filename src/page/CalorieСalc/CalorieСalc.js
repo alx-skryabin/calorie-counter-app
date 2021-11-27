@@ -1,41 +1,70 @@
 import React from 'react'
 import './CalorieСalc.css'
 
+const initialState = {
+  age: 26,
+  height: 178,
+  weight: 68,
+  activity: 1,
+  gender: 'man'
+}
+
 export default class CalorieCalc extends React.Component {
-  constructor() {
-    super(false);
+  state = {...initialState}
+
+  componentDidMount() {
     this.$form = document.querySelector('#formCalorie')
   }
 
-  state = {
-    age: 26,
-    height: 178,
-    weight: 68
+  onChangeGender(e) {
+    const newState = this.state
+    newState.gender = e.target.checked ? 'woman' : 'man'
+    this.setState(newState)
   }
 
-  componentDidMount() {
-    // const $form = document.querySelector('#formCalorie')
-    // $form.elements.age.value = 15
-    console.log(this.$form);
-  }
-
-  onChange(e) {
+  onChangeRange(e) {
     const newState = this.state
     const range = e.target.dataset.range
     newState[range] = e.target.value
     this.setState(newState)
   }
 
+  onChangeActivity(e) {
+    const newState = this.state
+    newState.activity = Number(e.target.value)
+    this.setState(newState)
+  }
+
+  resetForm() {
+    this.setState(initialState)
+    this.$form.reset()
+  }
+
+  customForm() {
+    this.setState({
+      age: 18,
+      height: 165,
+      weight: 45,
+      activity: 1,
+      gender: 'woman'
+    })
+  }
+
   render() {
     return (
       <div className="h_app">
+        {/*{JSON.stringify(this.state)}*/}
         <form id="formCalorie">
           <section>
             <div className="gender-switch">
               <div className="switch ">
                 <label>
                   Мужчина
-                  <input type="checkbox"/>
+                  <input
+                    type="checkbox"
+                    onChange={this.onChangeGender.bind(this)}
+                    checked={this.state.gender === 'woman' ? 'checked' : ''}
+                  />
                   <span className="lever"/>
                   Женщина
                 </label>
@@ -46,7 +75,7 @@ export default class CalorieCalc extends React.Component {
             <div className="h_params-body">
               <div className="h_params-body-item">
                 <input
-                  onChange={this.onChange.bind(this)}
+                  onChange={this.onChangeRange.bind(this)}
                   data-range="age" value={this.state.age}
                   type="range" min="1" max="100" name="age"
                 />
@@ -58,7 +87,7 @@ export default class CalorieCalc extends React.Component {
               </div>
               <div className="h_params-body-item">
                 <input
-                  onChange={this.onChange.bind(this)}
+                  onChange={this.onChangeRange.bind(this)}
                   data-range="height" value={this.state.height}
                   type="range" min="30" max="250" name="height"
                 />
@@ -70,7 +99,7 @@ export default class CalorieCalc extends React.Component {
               </div>
               <div className="h_params-body-item">
                 <input
-                  onChange={this.onChange.bind(this)}
+                  onChange={this.onChangeRange.bind(this)}
                   data-range="weight" value={this.state.weight}
                   type="range" min="1" max="200" name="weight"
                 />
@@ -85,34 +114,55 @@ export default class CalorieCalc extends React.Component {
           <section className="section-activity">
             <div className="h_subtitle">Активность</div>
             <label className="h_activity-item">
-              <input className="with-gap" name="activity" type="radio"/>
+              <input
+                className="with-gap" name="activity" type="radio" value="1"
+                onChange={this.onChangeActivity.bind(this)}
+                checked={this.state.activity === 1 ? 'checked' : ''}
+              />
               <span>Минимальная</span>
               <div className="helper-text">Сидячая работа и нет физических нагрузок</div>
             </label>
             <label className="h_activity-item">
-              <input className="with-gap" name="activity" type="radio"/>
+              <input
+                className="with-gap" name="activity" type="radio" value="2"
+                onChange={this.onChangeActivity.bind(this)}
+              />
               <span>Низкая</span>
               <div className="helper-text">Редкие, нерегулярные тренировки, активность в быту</div>
             </label>
             <label className="h_activity-item">
-              <input className="with-gap" name="activity" type="radio"/>
+              <input
+                className="with-gap" name="activity" type="radio" value="3"
+                onChange={this.onChangeActivity.bind(this)}
+              />
               <span>Средняя</span>
               <div className="helper-text">Тренировки 3-5 раз в неделю</div>
             </label>
             <label className="h_activity-item">
-              <input className="with-gap" name="activity" type="radio"/>
+              <input
+                className="with-gap" name="activity" type="radio" value="4"
+                onChange={this.onChangeActivity.bind(this)}
+              />
               <span>Высокая</span>
               <div className="helper-text">Тренировки 6-7 раз в неделю</div>
             </label>
             <label className="h_activity-item">
-              <input className="with-gap" name="activity" type="radio"/>
+              <input
+                className="with-gap" name="activity" type="radio" value="5"
+                onChange={this.onChangeActivity.bind(this)}
+              />
               <span>Очень высокая</span>
               <div className="helper-text">Больше 6 тренировок в неделю и физическая работа</div>
             </label>
           </section>
           <section className="section-control">
-            <div className="waves-effect waves-light btn">Рассчитать</div>
-            <div className="waves-effect waves-light red lighten-3 btn">✕ Очистить</div>
+            <div className="waves-effect waves-light btn" onClick={this.customForm.bind(this)}>Рассчитать</div>
+            <div
+              className="waves-effect waves-light red lighten-3 btn"
+              onClick={this.resetForm.bind(this)}
+            >
+              ✕ Очистить
+            </div>
           </section>
         </form>
         <div className="h_result-calorie-wrap teal accent-1">

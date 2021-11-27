@@ -15,7 +15,7 @@ export default function Sidenav() {
                 src="https://static.tildacdn.com/tild3663-3763-4535-b139-363863386261/-/resize/504x/1587048064_11-p-khim.png"
                 alt="bg"/>
             </div>
-            <a href="#">
+            <a href="/">
               <img className="circle"
                    src="https://i.ya-webdesign.com/images/health-transparent-background.png"
                    alt="logo"
@@ -23,19 +23,19 @@ export default function Sidenav() {
             </a>
           </div>
         </li>
-        <li><a className="subheader">Калькуляторы</a></li>
+        <li><span className="subheader" style={{marginLeft: '30px'}}>Калькуляторы</span></li>
         <li className="nav-icon">
-          <a href="#"><i className="fas fa-utensils"/> Калькулятор калорий</a>
+          <a href="/"><i className="fas fa-utensils"/> Калькулятор калорий</a>
         </li>
         <li className="nav-icon">
-          <a href="#"><i className="fas fa-child"/> Индекс массы тела</a>
+          <a href="/"><i className="fas fa-child"/> Индекс массы тела</a>
         </li>
         <li className="nav-icon">
-          <a href="#"><i className="fas fa-weight"/> Идеальный вес</a>
+          <a href="/"><i className="fas fa-weight"/> Идеальный вес</a>
         </li>
       </div>
       <div className="nav-feedback">
-        <a href="https://github.com/alx-skryabin/health-calculators-app" target="_blank">
+        <a href="https://github.com/alx-skryabin/health-calculators-app" target="_blank" rel="noreferrer">
           <span>Improvements? — </span>
           github <i className="fab fa-github"/>
         </a>

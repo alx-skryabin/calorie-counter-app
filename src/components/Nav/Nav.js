@@ -8,7 +8,7 @@ export default class Nav extends React.Component {
       <div className="h_nav z-depth-3">
         <div className="h_nav-line">
           <div className="h_nav-logo">
-            <a href="#">
+            <a href="/">
               <img
                 src="https://i.ya-webdesign.com/images/health-transparent-background.png"
                 alt="logo"
@@ -18,7 +18,7 @@ export default class Nav extends React.Component {
           </div>
           <div className="h_nav-menu">
             <a
-              href="#"
+              href="/"
               data-target="slide-out"
               className="sidenav-trigger waves-effect waves-light"
             >
