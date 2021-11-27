@@ -51,9 +51,10 @@ export default class CalorieCalc extends React.Component {
   }
 
   render() {
+    const {n, l, m} = calc(this.state)
+
     return (
       <div className="h_app">
-        {/*{JSON.stringify(this.state)}*/}
         <form id="formCalorie">
           <section>
             <div className="gender-switch">
@@ -155,8 +156,7 @@ export default class CalorieCalc extends React.Component {
               <div className="helper-text">Больше 6 тренировок в неделю и физическая работа</div>
             </label>
           </section>
-          <section className="section-control">
-            <div className="waves-effect waves-light btn" onClick={this.customForm.bind(this)}>Рассчитать</div>
+          <section>
             <div
               className="waves-effect waves-light red lighten-3 btn"
               onClick={this.resetForm.bind(this)}
@@ -169,20 +169,61 @@ export default class CalorieCalc extends React.Component {
           <div className="h_subtitle center-align">Ваша норма калорий</div>
           <div className="h_result-calorie">
             <div className="h_result-calorie-item">
-              <strong>400 ккал</strong>
+              <strong>{l} ккал</strong>
               <span><i className="fas fa-sort-down"/> Снижение веса</span>
             </div>
             <div className="h_result-calorie-item">
-              <strong>500 ккал</strong>
+              <strong>{n} ккал</strong>
               <span><i className="fas fa-sort"/> Поддержание веса</span>
             </div>
             <div className="h_result-calorie-item">
-              <strong>600 ккал</strong>
+              <strong>{m} ккал</strong>
               <span><i className="fas fa-sort-up"/> Набор веса</span>
             </div>
           </div>
         </div>
       </div>
     )
+  }
+}
+
+function defineActivity(activity) {
+  let k = 1
+  switch (activity) {
+    case 1:
+      k = 1.2
+      break
+    case 2:
+      k = 1.375
+      break
+    case 3:
+      k = 1.55
+      break
+    case 4:
+      k = 1.725
+      break
+    case 5:
+      k = 1.9
+      break
+    default:
+      k = 1.2
+      break
+  }
+  return k
+}
+
+function calc(state) {
+  const coefficients = {
+    man: [88.36, 13.4, 4.8, 5.7],
+    woman: [447.6, 9.2, 3.1, 4.3]
+  }
+  const {gender, weight, height, age, activity} = state
+  const [g, w, h, a] = coefficients[gender]
+
+  const N = (g + (w * weight) + (h * height) - (a * age)) * defineActivity(activity)
+  return {
+    n: Math.round(N),
+    l: Math.round(N * 0.85),
+    m: Math.round(N * 1.15)
   }
 }

@@ -53,14 +53,6 @@ form section:last-child {
   width: 40px;
 }
 
-.section-control {
-  text-align: center;
-}
-
-.section-control .btn {
-  margin-right: 15px;
-}
-
 .h_result-calorie-wrap {
   background: #ccc;
   padding: 15px;
