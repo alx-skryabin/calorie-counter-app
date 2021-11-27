@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidenav from './Sidenav'
+import logo from '../../assets/img/logo.png'
 import './Nav.css'
 
 export default class Nav extends React.Component {
@@ -10,7 +11,7 @@ export default class Nav extends React.Component {
           <div className="h_nav-logo">
             <a href="/">
               <img
-                src="https://i.ya-webdesign.com/images/health-transparent-background.png"
+                src={logo}
                 alt="logo"
               />
               <span>Health</span>

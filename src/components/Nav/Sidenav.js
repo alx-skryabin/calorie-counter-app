@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import logo from '../../assets/img/logo.png'
 
 export default function Sidenav() {
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function Sidenav() {
             </div>
             <a href="/">
               <img className="circle"
-                   src="https://i.ya-webdesign.com/images/health-transparent-background.png"
+                   src={logo}
                    alt="logo"
               />
             </a>

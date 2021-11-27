@@ -77,3 +77,26 @@ form section:last-child {
   font-size: 1.4em;
   font-weight: 600;
 }
+
+@media screen and (max-width: 600px) {
+  .h_params-body {
+    display: block;
+  }
+
+  .h_params-body-item {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .h_result-calorie {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .h_result-calorie-item {
+    margin: 15px 0;
+  }
+}
