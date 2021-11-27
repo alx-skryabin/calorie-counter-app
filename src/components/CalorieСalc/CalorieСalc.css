@@ -1,0 +1,87 @@
+form section {
+  margin-bottom: 20px;
+}
+
+form section:last-child {
+  margin-bottom: 0;
+}
+
+.section-activity {
+  margin: 40px 0 40px;
+}
+
+.h_subtitle {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.h_params-body {
+  display: flex;
+}
+
+.h_params-body-item {
+  width: 33.33%;
+  margin-right: 20px;
+}
+
+.h_params-body-item:last-child {
+  margin-right: 0;
+}
+
+.h_activity-item {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.h_activity-item span {
+  color: #444;
+}
+
+
+.h_params-body-item input[type="range"] {
+  border: none;
+  margin: 5px 0;
+}
+
+.h_params-desc-value {
+  display: inline-block;
+  font-size: 1.4em;
+  text-align: center;
+  width: 40px;
+}
+
+.section-control {
+  text-align: center;
+}
+
+.section-control .btn {
+  margin-right: 15px;
+}
+
+.h_result-calorie-wrap {
+  background: #ccc;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 15px;
+  color: #196f47;
+}
+
+.h_result-calorie {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.h_result-calorie-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.h_result-calorie-item strong {
+  font-size: 1.4em;
+  font-weight: 600;
+}

@@ -1,0 +1,33 @@
+.gender-switch {
+  text-align: center;
+}
+
+.gender-switch label {
+  font-size: 1.4em;
+  color: #555;
+}
+
+.gender-switch label .lever::after {
+  background: #338ede !important;
+}
+
+.gender-switch label input[type="checkbox"]:checked + .lever::after {
+  background: #dc4848 !important;
+}
+
+.gender-switch label input[type="checkbox"]:checked + .lever {
+  background: #fdb2b2 !important;
+}
+
+.gender-switch .lever {
+  background: #a5d4ff !important;
+}
+
+.noUi-tooltip {
+  display: none;
+}
+.noUi-active .noUi-tooltip {
+  display: block;
+}
+
+

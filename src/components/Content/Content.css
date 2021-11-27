@@ -1,0 +1,16 @@
+.h_content {
+  background: rgba(255, 255, 255, .9);
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.h_name-app {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
