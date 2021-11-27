@@ -26,13 +26,13 @@ export default function Sidenav() {
         </li>
         <li><span className="subheader" style={{marginLeft: '30px'}}>Калькуляторы</span></li>
         <li className="nav-icon">
-          <a href="/"><i className="fas fa-utensils"/> Калькулятор калорий</a>
+          <a href="/"><i className="fas fa-candy-cane"/> Калькулятор калорий</a>
         </li>
         <li className="nav-icon">
-          <a href="/"><i className="fas fa-child"/> Индекс массы тела</a>
+          <a href="/"><i className="fas fa-fire-alt"/> Индекс массы тела</a>
         </li>
         <li className="nav-icon">
-          <a href="/"><i className="fas fa-weight"/> Идеальный вес</a>
+          <a href="/"><i className="far fa-grin-stars"/> Идеальный вес</a>
         </li>
       </div>
       <div className="nav-feedback">

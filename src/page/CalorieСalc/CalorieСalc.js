@@ -1,4 +1,5 @@
 import React from 'react'
+import Title from '../../components/Content/title'
 import './CalorieСalc.css'
 
 const initialState = {
@@ -11,10 +12,6 @@ const initialState = {
 
 export default class CalorieCalc extends React.Component {
   state = {...initialState}
-
-  componentDidMount() {
-    this.$form = document.querySelector('#formCalorie')
-  }
 
   onChangeGender(e) {
     const newState = this.state
@@ -37,17 +34,6 @@ export default class CalorieCalc extends React.Component {
 
   resetForm() {
     this.setState(initialState)
-    this.$form.reset()
-  }
-
-  customForm() {
-    this.setState({
-      age: 18,
-      height: 165,
-      weight: 45,
-      activity: 1,
-      gender: 'woman'
-    })
   }
 
   render() {
@@ -55,6 +41,7 @@ export default class CalorieCalc extends React.Component {
 
     return (
       <div className="h_app">
+        <Title num="1"/>
         <form id="formCalorie">
           <section>
             <div className="gender-switch">
@@ -188,7 +175,7 @@ export default class CalorieCalc extends React.Component {
 }
 
 function defineActivity(activity) {
-  let k = 1
+  let k
   switch (activity) {
     case 1:
       k = 1.2
