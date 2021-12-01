@@ -2,8 +2,7 @@ import React from 'react'
 
 const APPS = {
   1: ['Калькулятор калорий', 'fas fa-candy-cane'],
-  2: ['Индекс массы тела', 'fas fa-fire-alt'],
-  3: ['Идеальный вес', 'far fa-grin-stars']
+  2: ['Индекс массы тела', 'fas fa-fire-alt']
 }
 
 export default function Title(props) {

@@ -31,9 +31,6 @@ export default function Sidenav() {
         <li className="nav-icon">
           <a href="/"><i className="fas fa-fire-alt"/> Индекс массы тела</a>
         </li>
-        <li className="nav-icon">
-          <a href="/"><i className="far fa-grin-stars"/> Идеальный вес</a>
-        </li>
       </div>
       <div className="nav-feedback">
         <a href="https://github.com/alx-skryabin/health-calculators-app" target="_blank" rel="noreferrer">
