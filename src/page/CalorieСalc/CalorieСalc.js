@@ -42,7 +42,7 @@ export default class CalorieCalc extends React.Component {
     return (
       <div className="h_app">
         <Title num="1"/>
-        <form id="formCalorie">
+        <form>
           <section>
             <div className="gender-switch">
               <div className="switch ">
@@ -67,7 +67,7 @@ export default class CalorieCalc extends React.Component {
                   data-range="age" value={this.state.age}
                   type="range" min="1" max="100" name="age"
                 />
-                <div className="h_params-desc">
+                <div>
                   <strong>Возраст:</strong>
                   <span className="h_params-desc-value">{this.state.age}</span>
                   <span>лет</span>
@@ -79,7 +79,7 @@ export default class CalorieCalc extends React.Component {
                   data-range="height" value={this.state.height}
                   type="range" min="30" max="250" name="height"
                 />
-                <div className="h_params-desc">
+                <div>
                   <strong>Рост:</strong>
                   <span className="h_params-desc-value">{this.state.height}</span>
                   <span>см</span>
@@ -91,7 +91,7 @@ export default class CalorieCalc extends React.Component {
                   data-range="weight" value={this.state.weight}
                   type="range" min="1" max="200" name="weight"
                 />
-                <div className="h_params-desc">
+                <div>
                   <strong>Вес:</strong>
                   <span className="h_params-desc-value">{this.state.weight}</span>
                   <span>кг</span>

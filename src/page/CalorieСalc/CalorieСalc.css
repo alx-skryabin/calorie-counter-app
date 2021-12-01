@@ -10,14 +10,6 @@ form section:last-child {
   margin: 40px 0 40px;
 }
 
-.h_subtitle {
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  font-size: 1.3em;
-  color: #333;
-}
-
 .h_params-body {
   display: flex;
 }
@@ -53,7 +45,6 @@ form section:last-child {
 }
 
 .h_result-calorie-wrap {
-  background: #ccc;
   padding: 15px;
   margin-top: 30px;
   border-radius: 15px;
