@@ -37,7 +37,7 @@ export default class BodyMassIndex extends React.Component {
     const {IMT, range, text, color} = this.calc()
     return (
       <div className="h_app">
-        <Title num="2"/>
+        <Title num="3"/>
         <div className="h_params-wrap">
           <div className="h_params-item">
             <input

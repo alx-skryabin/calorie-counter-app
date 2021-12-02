@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidenav from './Sidenav'
+import {Link} from 'react-router-dom'
 import logo from '../../assets/img/logo.png'
 import './Nav.css'
 
@@ -9,13 +10,13 @@ export default class Nav extends React.Component {
       <div className="h_nav z-depth-3">
         <div className="h_nav-line">
           <div className="h_nav-logo">
-            <a href="/">
+            <Link to="/">
               <img
                 src={logo}
                 alt="logo"
               />
               <span>Health</span>
-            </a>
+            </Link>
           </div>
           <div className="h_nav-menu">
             <a

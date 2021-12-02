@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import logo from '../../assets/img/logo.png'
+import {Link} from 'react-router-dom'
 
 export default function Sidenav() {
   useEffect(() => {
@@ -16,20 +17,20 @@ export default function Sidenav() {
                 src="https://static.tildacdn.com/tild3663-3763-4535-b139-363863386261/-/resize/504x/1587048064_11-p-khim.png"
                 alt="bg"/>
             </div>
-            <a href="/">
+            <Link to="/">
               <img className="circle"
                    src={logo}
                    alt="logo"
               />
-            </a>
+            </Link>
           </div>
         </li>
         <li><span className="subheader" style={{marginLeft: '30px'}}>Калькуляторы</span></li>
         <li className="nav-icon">
-          <a href="/"><i className="fas fa-candy-cane"/> Калькулятор калорий</a>
+          <Link to="/calorie"><i className="fas fa-candy-cane"/> Калькулятор калорий</Link>
         </li>
         <li className="nav-icon">
-          <a href="/"><i className="fas fa-fire-alt"/> Индекс массы тела</a>
+          <Link to="/imt"><i className="fas fa-fire-alt"/> Индекс массы тела</Link>
         </li>
       </div>
       <div className="nav-feedback">

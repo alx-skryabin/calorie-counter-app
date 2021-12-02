@@ -41,7 +41,7 @@ export default class CalorieCalc extends React.Component {
 
     return (
       <div className="h_app">
-        <Title num="1"/>
+        <Title num="2"/>
         <form>
           <section>
             <div className="gender-switch">
