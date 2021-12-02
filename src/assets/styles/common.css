@@ -24,3 +24,26 @@ body {
   font-size: 1.3em;
   color: #333;
 }
+
+.h_wrap-apps {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.h_apps-item {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.h_apps-item:last-of-type {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.h_apps-item a {
+  background: gold;
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 5px;
+  color: #444;
+}
