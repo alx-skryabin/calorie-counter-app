@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 const APPS = {
   1: ['Главная', 'fas fa-home'],
@@ -8,6 +8,9 @@ const APPS = {
 
 export default function Title(props) {
   const [name, iconClass] = APPS[props.num]
+  useEffect(() => {
+    document.querySelector('head title').innerHTML = name
+  }, [name])
 
   return (
     <div className="h_name-app">

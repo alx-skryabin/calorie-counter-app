@@ -19,6 +19,7 @@ const indexs = [
 
 export default class BodyMassIndex extends React.Component {
   state = {...initialState}
+  doChange = false
 
   onChangeRange(e) {
     const newState = this.state
@@ -29,12 +30,22 @@ export default class BodyMassIndex extends React.Component {
 
   calc() {
     const {height, weight} = this.state
-    const IMT = Number((weight / ((height / 100) ** 2)).toFixed(2))
+    const IMT = Number((weight / ((height / 100) ** 2))
+      .toFixed(2))
     return defineResult(IMT)
+  }
+
+  // декоратор debounce
+  debounceOnChange(e) {
+    if (this.doChange) return
+    this.onChangeRange(e)
+    this.doChange = true
+    setTimeout(() => this.doChange = false, 100)
   }
 
   render() {
     const {IMT, range, text, color} = this.calc()
+
     return (
       <div className="h_app">
         <Title num="3"/>
@@ -53,7 +64,7 @@ export default class BodyMassIndex extends React.Component {
           </div>
           <div className="h_params-item">
             <input
-              onChange={this.onChangeRange.bind(this)}
+              onChange={this.debounceOnChange.bind(this)}
               data-range="weight" defaultValue={this.state.weight}
               type="range" min="1" max="200" name="weight"
             />
