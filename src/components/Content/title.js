@@ -9,7 +9,7 @@ const APPS = {
 export default function Title(props) {
   const [name, iconClass] = APPS[props.num]
   useEffect(() => {
-    document.querySelector('head title').innerHTML = name
+    document.querySelector('head title').innerText = name
   }, [name])
 
   return (

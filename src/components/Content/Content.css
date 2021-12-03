@@ -15,6 +15,13 @@
   font-weight: 600;
 }
 
+.h_loader-app {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 600px) {
   .h_content {
     padding: 20px;
