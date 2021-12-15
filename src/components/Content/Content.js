@@ -10,6 +10,7 @@ import './Content.css'
 //lazy load page
 const BodyMassIndex = React.lazy(() => import('../../page/BodyMassIndex/BodyMassIndex'))
 const CalorieCalc = React.lazy(() => import('../../page/CalorieСalc/CalorieСalc'))
+const Demo = React.lazy(() => import('../../page/demo/Demo'))
 const Home = React.lazy(() => new Promise(resolve => {
   setTimeout(() => {
     resolve(import('../../page/home/Home'))
@@ -26,6 +27,7 @@ export default class Content extends React.Component {
             <Routes>
               <Route exact path="/imt" element={<BodyMassIndex/>}/>
               <Route exact path="/calorie" element={<CalorieCalc/>}/>
+              <Route exact path="/demo" element={<Demo/>}/>
               <Route exact path="*" element={<Home/>}/>
             </Routes>
           </Suspense>

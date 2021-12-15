@@ -18,6 +18,11 @@ export default class Home extends React.Component {
               <i className="fas fa-fire-alt"/> Индекс массы тела
             </Link>
           </div>
+          <div className="h_apps-item">
+            <Link to="/demo" className="hoverable">
+              <i className="fab fa-react"/> Demo React
+            </Link>
+          </div>
         </div>
       </div>
     )
