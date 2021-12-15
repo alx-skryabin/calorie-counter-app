@@ -2,9 +2,13 @@
 
 1) Calculation of calories
 2) Calculation of body mass index
-3) Ideal weight
 
-React App 
+
+React App
+- class components
+- useEffect, useState
+- React.lazy (Suspense)
+- Router (Routes)
 
 
 ### Available Scripts
