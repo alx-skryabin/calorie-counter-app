@@ -2,6 +2,8 @@
 
 # projects
 .idea
+.firebase
+.github
 
 # dependencies
 /node_modules
