@@ -1,7 +1,9 @@
 ### Health Calculator Apps
 
-1) Calculation of calories
-2) Calculation of body mass index
+Link for demo: [health-544cb.web.app](https://health-544cb.web.app/)
+1) Home page
+2) Calculation of calories
+3) Calculation of body mass index
 
 
 React App
@@ -9,6 +11,11 @@ React App
 - useEffect, useState
 - React.lazy (Suspense)
 - Router (Routes)
+
+### Deploy
+To deploy on `firebase`, you need to run the following commands
+- npm run build
+- firebase deploy
 
 
 ### Available Scripts
@@ -30,3 +37,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+### `firebase deploy`
+
+To deploy a project on firebase
